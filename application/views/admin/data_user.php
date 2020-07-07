@@ -4,9 +4,9 @@
     </p>
     <?php
     if ($this->session->flashdata('sukses')) {
-        echo '<p class"alert alert-success">';
+        echo '<p class"alert alert-success text-center">';
         echo $this->session->flashdata('sukses');
-        echo '</div>';
+        echo '</p>';
     }
     ?>
     <table class="table table-bordered" id="myTable">
@@ -20,7 +20,7 @@
                 <th>Aksi</th>
             </tr>
         </thead>
-
+        
         <tbody>
             <?php
             $no = 1;
@@ -36,7 +36,6 @@
                         <a href="<?php echo base_url('admin/data_user/edit/' . $user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
                         <a href="<?php echo base_url('admin/data_user/delete/' . $user->id_user) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')"><i class="fas fa-trash"></i></a>
                     </td>
-
                 </tr>
             <?php endforeach; ?>
         </tbody>
